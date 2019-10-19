@@ -24,23 +24,23 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
   <a class="navbar-brand" href="#">Simple ERP</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="menu-btn">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
       <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseServices" data-parent="#exampleAccordion">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseServices" data-parent="#exampleAccordion" id="services-nav">
           <i class="fa fa-fw fa-wrench"></i>
-          <span class="nav-link-text">Services</span>
+          <span class="nav-link-text" >Services</span>
         </a>
         <ul class="sidenav-second-level collapse" id="collapseServices">
           <li>
-            <a th:href="@{/tags}">Tags</a>
+            <a th:href="@{/tags}" id="tags-id">Tags</a>
           </li>
           <li>
-            <a th:href="@{/services}">Services</a>
+            <a th:href="@{/services}" id="services-id">Services</a>
           </li>
         </ul>
       </li>

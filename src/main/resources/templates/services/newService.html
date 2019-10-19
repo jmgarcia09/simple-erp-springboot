@@ -2,7 +2,7 @@
 <th:block layout:fragment="content">
   <body>
   <div>
-    <form method="post" th:action="@{/services/new}" th:object="${service}">
+    <form method="post" th:action="@{/services/new}" th:object="${service}" id="create-service">
 
       <div class="form-group">
         <label for="reference">Ref.</label>

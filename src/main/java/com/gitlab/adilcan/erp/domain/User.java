@@ -46,6 +46,16 @@ public class User extends BaseEntity implements UserDetails {
 	}
 
 	@Override
+	public String getPassword() {
+		return password;
+	}
+
+	@Override
+	public String getUsername() {
+		return username;
+	}
+
+	@Override
 	public boolean isAccountNonExpired() {
 		return true;
 	}
@@ -63,5 +73,9 @@ public class User extends BaseEntity implements UserDetails {
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

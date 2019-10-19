@@ -2,11 +2,11 @@
 <th:block layout:fragment="content">
   <body>
   <div>
-    <a th:href="@{/services/new}" class="btn btn-primary" type="submit">Create Service</a>
-    <a class="btn btn-success" th:href="@{/services?sale_status=FOR_SALE}">For Sale</a>
+    <a th:href="@{/services/new}" class="btn btn-primary" type="submit" id="create-service">Create Service</a>
+    <a class="btn btn-success" th:href="@{/services?sale_status=FOR_SALE}" id="service-for-sale">For Sale</a>
     <a class="btn btn-success" th:href="@{/services?sale_status=NOT_FOR_SALE}">Not for Sale</a>
   </div>
-  <div class="table-responsive">
+  <div class="table-responsive" id="services-table">
     <table class="table table-bordered">
       <thead>
       <tr>
