@@ -6,6 +6,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.boot.test.context.SpringBootContextLoader;
@@ -34,8 +35,14 @@ import static org.junit.Assert.fail;
             //System.out.println(WebDriverManager.chromedriver().getVersions());
             //WebDriverManager.chromedriver().version("77.0.3865.40").setup();
             //driver = new ChromeDriver();
-            DesiredCapabilities capability = DesiredCapabilities.chrome();
-            driver = new RemoteWebDriver(new URL("http://192.168.99.101:4444/wd/hub"), capability);
+            //DesiredCapabilities capability = DesiredCapabilities.chrome();
+            //driver = new RemoteWebDriver(new URL("http://192.168.99.101:4444/wd/hub"), capability);
+            System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+            ChromeOptions chromeOptions = new ChromeOptions();
+            chromeOptions.addArguments("--headless");
+            chromeOptions.addArguments("--no-sandbox");
+
+            driver = new ChromeDriver(chromeOptions);
             baseUrl = "https://www.katalon.com/";
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
