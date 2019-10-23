@@ -42,7 +42,7 @@ public class ServicesModuleSteps extends SpringIntegrationTest {
 
     @When("^se selecciona Create Service$")
     public void se_selecciona_Create_Service() throws Throwable {
-        getDriver().findElement(By.id("creates-service")).click();
+        getDriver().findElement(By.id("create-service")).click();
     }
 
     @Then("^se redirige a la url http://(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+):(\\d+)/services/new$")
